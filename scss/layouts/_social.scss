@@ -1,0 +1,13 @@
+.sc {
+    &-list {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 3.2rem;
+    }
+
+    &-item {
+        width: 15rem;
+        height: 15rem;
+    }
+}

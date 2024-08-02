@@ -1,0 +1,20 @@
+.tag {
+  &-new {
+    border-radius: 0.4rem;
+    background: linear-gradient(261deg, #1a86ea 4.5%, #12b3c9 101.88%);
+    padding: 2px 12px;
+    color: #fff;
+    font-size: 2.8rem;
+    font-style: italic;
+    font-weight: 500;
+    line-height: normal;
+    text-transform: capitalize;
+    height: fit-content;
+  }
+}
+
+.com-link {
+    display: block;
+    width: 2.4rem;
+    height: 2.4rem;
+}

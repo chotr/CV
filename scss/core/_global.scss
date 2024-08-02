@@ -1,0 +1,375 @@
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.col {
+  -ms-flex-preferred-size: 0;
+  flex-basis: 0;
+  -webkit-box-flex: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  max-width: 100%;
+}
+
+.no-gutters {
+  margin-right: 0;
+  margin-left: 0;
+}
+
+.no-gap>.col,
+.no-gap>[class*="col-"] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+// ---------- flex ----------
+.flex {
+  @include flex();
+
+  &-center {
+    @include flex();
+    justify-content: center;
+    align-items: center;
+
+    &-between {
+      @include flex();
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &-1 {
+    flex: 1;
+  }
+
+  &-wrap {
+    flex-wrap: wrap;
+  }
+
+  &-shrink {
+    flex-shrink: 0;
+  }
+
+  &-ai-start {
+    align-items: flex-start;
+  }
+
+  &-ai-center {
+    align-items: center;
+  }
+
+  &-ai-end {
+    align-items: flex-end;
+  }
+
+  &-jc-start {
+    justify-content: flex-start;
+  }
+
+  &-jc-center {
+    justify-content: center;
+  }
+
+  &-jc-end {
+    justify-content: flex-end;
+  }
+
+  &-jc-between {
+    justify-content: space-between;
+  }
+
+  &-jc-around {
+    justify-content: space-around;
+  }
+
+  &-jc-evenly {
+    justify-content: space-evenly;
+  }
+
+  &-row-reverse {
+    flex-direction: row-reverse;
+  }
+
+  &-column {
+    flex-direction: column;
+  }
+
+  &-column-reverse {
+    flex-direction: column-reverse;
+  }
+
+}
+
+// ---------- position ----------
+.pos {
+  &-relative {
+    position: relative;
+  }
+
+  &-abs {
+    position: absolute;
+  }
+
+  &-fixed {
+    position: fixed;
+  }
+
+  &-sticky {
+    position: sticky;
+  }
+}
+
+// top, right, bottom, left
+.inset-0 {
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+
+//---------- overflow ----------
+.overflow {
+  &-hidden {
+    overflow: hidden;
+  }
+
+  &-auto {
+    overflow: auto;
+  }
+
+  &-scroll {
+    overflow: scroll;
+  }
+}
+
+
+// width
+.w {
+  &-full {
+    width: 100%;
+  }
+
+  &-50 {
+    width: 50%;
+  }
+
+  &-screen {
+    width: 100vw;
+  }
+
+  &-fit {
+    width: fit-content;
+  }
+
+  &-max {
+    width: max-content;
+  }
+
+  &-min {
+    width: min-content;
+  }
+}
+
+// css height
+.h {
+  &-full {
+    height: 100%;
+  }
+
+  &-screen {
+    height: 100vh;
+  }
+
+  &-50 {
+    height: 50%;
+  }
+}
+
+// ---------- text align ----------
+
+.text {
+  &-right {
+    text-align: right;
+  }
+
+  &-center {
+    text-align: center;
+  }
+
+  &-left {
+    text-align: left;
+  }
+
+  &-justify {
+    text-align: justify;
+  }
+}
+
+// ---------- text transform ----------
+.upper {
+  text-transform: uppercase;
+}
+
+.lower {
+  text-transform: lowercase;
+}
+
+.capital {
+  text-transform: capitalize;
+}
+
+
+// ---------- border radius ----------
+.rounded {
+  &-full {
+    border-radius: 100rem;
+  }
+
+  &-inherit {
+    border-radius: inherit;
+  }
+
+  &-xl {
+    border-radius: 20px;
+  }
+
+  &-lg {
+    border-radius: 12px;
+  }
+
+  &-md {
+    border-radius: 8px;
+  }
+
+  &-sm {
+    border-radius: 4px;
+  }
+}
+
+// ---------- border ----------
+.border {
+  &-none {
+    border: none;
+  }
+
+  &-current {
+    border-color: currentColor;
+  }
+}
+
+// ---------- outline ----------
+.outline {
+  &-none {
+    outline: none;
+  }
+
+  &-current {
+    outline-color: currentColor;
+  }
+}
+
+// ---------- background ----------
+.bg {
+  &-cover {
+    background-size: cover;
+  }
+
+  &-center {
+    background-position: center;
+  }
+
+  &-no-repeat {
+    background-repeat: no-repeat;
+  }
+
+  &-fixed {
+    background-attachment: fixed;
+  }
+}
+
+// ---------- pointer ----------
+.pointer {
+  cursor: pointer;
+
+  &-none {
+    pointer-events: none;
+  }
+}
+
+// ---------- resize ----------
+.resize-none {
+  resize: none;
+}
+
+// --------- display ----------
+.block {
+  display: block;
+}
+
+.in-block {
+  display: inline-block;
+}
+
+.in-flex {
+  display: inline-flex;
+}
+
+.d-none {
+  display: none;
+}
+
+// opacity
+.opacity-1 {
+  opacity: 0.1;
+}
+
+.opacity-2 {
+  opacity: 0.2;
+}
+
+.opacity-3 {
+  opacity: 0.3;
+}
+
+.opacity-4 {
+  opacity: 0.4;
+}
+
+.opacity-5 {
+  opacity: 0.5;
+}
+
+.opacity-6 {
+  opacity: 0.6;
+}
+
+.opacity-7 {
+  opacity: 0.7;
+}
+
+.opacity-8 {
+  opacity: 0.8;
+}
+
+.opacity-9 {
+  opacity: 0.9;
+}
+
+// hidden-on
+.hidden {
+  display: none;
+
+}
+
+// show on
+.show {
+  display: block;
+
+}

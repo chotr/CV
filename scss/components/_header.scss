@@ -1,0 +1,9 @@
+.header {
+  position: fixed;
+  z-index: 999;
+  transition: all 0.4s ease-in-out;
+  top: 0;
+  background: white;
+  width: 100%;
+  // cursor: pointer;
+}

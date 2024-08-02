@@ -1,0 +1,84 @@
+.register {
+  &-top {
+    padding-top: 4.4rem;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      width: 100%;
+      left: 0;
+      min-height: 45rem;
+      pointer-events: none;
+      background: linear-gradient(
+        337deg,
+        #0026de 8.64%,
+        #005fdd 34.17%,
+        #00a4dc 61.15%,
+        #00eadb 85.27%
+      );
+    }
+
+    .control-rght {
+      margin-left: auto;
+    }
+
+    .control-text {
+      margin-bottom: 10.8rem;
+    }
+  }
+
+  &-body {
+    z-index: 20;
+
+    &::before {
+      position: absolute;
+      content: "";
+      height: 20rem;
+      border-radius: 4rem;
+      background: rgba(217, 217, 217, 0.39);
+      width: 90%;
+      top: -2.4rem;
+      z-index: -1;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    .wrap {
+      padding-left: 14rem;
+      padding-right: 14rem;
+    }
+  }
+
+  &-form {
+    background: #fffcfc;
+    padding-top: 18.2rem;
+    border-radius: 4rem 4rem 0px 0px;
+    padding-bottom: 12rem;
+  }
+
+  &-box {
+    // padding-left: 8.6rem;
+    // padding-right: 8.6rem;
+  }
+
+  &-verify {
+    color: #0036f3;
+    text-align: right;
+    font-size: 3.2rem;
+    display: block;
+    font-weight: 400;
+    line-height: normal;
+    margin-top: 2.4rem;
+    cursor: pointer;
+  }
+
+  &-bt {
+    font-size: 3.6rem;
+  }
+}
+
+.link {
+    color: #0036F3;
+    cursor: pointer;
+}

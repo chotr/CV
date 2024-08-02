@@ -1,0 +1,32 @@
+import PopupModule from "./module/PopupModule.js";
+import CheckModule from "./module/CheckModule.js";
+import Select2Module from "./module/Select2Module.js";
+import TabModule from "./module/TabModule.js";
+import HeaderModule from "./module/HeaderModule.js";
+import SideModule from "./module/SideModule.js";
+import tooltipModule from "./module/tooltipModule.js";
+import SmoothScrollModule from "./module/SmoothScrollModule.js";
+import UploadAvt from "./module/UploadAvt.js";
+import DatePickerModule from "./module/DatePickerModule.js";
+import ValidateForm from "./module/validate.js";
+import ChargeForm from "./module/ChargeForm.js";
+import WithdrawalFunction from "./module/Withdrawal.js";
+import CopyString from "./module/CopyString.js";
+
+window.addEventListener("DOMContentLoaded", () => {
+  HeaderModule();
+  CheckModule();
+  Select2Module();
+  TabModule();
+  PopupModule();
+  SideModule();
+  tooltipModule();
+  SmoothScrollModule();
+  UploadAvt();
+  PopupModule();
+  DatePickerModule();
+  ValidateForm();
+  ChargeForm();
+  WithdrawalFunction();
+  CopyString();
+});

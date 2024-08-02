@@ -1,0 +1,205 @@
+.btn {
+  position: relative;
+  width: fit-content;
+  height: 10rem;
+  min-width: 43rem;
+  background: linear-gradient(
+    0deg,
+    rgb(253, 186, 0) 0%,
+    rgba(247, 227, 150, 1) 100%
+  );
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.8s, color 0.3s 0.3s, transform 0.3s;
+  display: block;
+  user-select: none;
+  border-radius: 4.6rem;
+  color: white;
+  flex-shrink: 0;
+  font-size: 3.6rem;
+  font-family: "Black Han Sans";
+  color: #563f00;
+  padding-left: 5rem;
+  padding-right: 5rem;
+  box-shadow: 0px -5px 6px 0px rgba(255, 255, 255, 0.85) inset,
+    0px 13px 2px -9px rgba(255, 255, 255, 0.75) inset;
+
+  &.fw {
+    width: 100%;
+  }
+
+  &.non-upper {
+    .btn-inner {
+      text-transform: none;
+    }
+  }
+
+  &.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.btn-2 {
+  position: relative;
+  width: fit-content;
+  height: 11rem;
+  background: linear-gradient(24deg, #005fdd 20.95%, #00a4dc 85.3%);
+  cursor: pointer;
+  overflow: hidden;
+  display: block;
+  user-select: none;
+  border-radius: 1.6rem;
+  color: white;
+  flex-shrink: 0;
+  font-size: 3.6rem;
+  font-weight: 600;
+  padding-left: 7rem;
+  padding-right: 7rem;
+  box-shadow: 0px 0.4rem 0.4rem 0px rgba(255, 255, 255, 0.5) inset,
+    0px 0.6rem 0.8rem 0px rgba(0, 0, 0, 0.25);
+
+  &.fw {
+    width: 100%;
+  }
+
+  &.non-upper {
+    .btn-inner {
+      text-transform: none;
+    }
+  }
+
+  &.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.btn-3 {
+  position: relative;
+  width: fit-content;
+  height: 11rem;
+  background: linear-gradient(24deg, #1AA104 20.95%, #00DC16 85.3%);
+  cursor: pointer;
+  overflow: hidden;
+  display: block;
+  user-select: none;
+  border-radius: 1.6rem;
+  color: white;
+  flex-shrink: 0;
+  font-size: 3.6rem;
+  font-weight: 600;
+  padding-left: 7rem;
+  padding-right: 7rem;
+  box-shadow: 0px 0.4rem 0.4rem 0px rgba(255, 255, 255, 0.5) inset,
+    0px 0.6rem 1.2rem 0px rgba(0, 0, 0, 0.25);
+
+  &.fw {
+    width: 100%;
+  }
+
+  &.non-upper {
+    .btn-inner {
+      text-transform: none;
+    }
+  }
+
+  &.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.btn-4 {
+  position: relative;
+  width: fit-content;
+  height: 11rem;
+  background: linear-gradient(180deg, #E5E1D7 0%, #BAB4A2 53.41%);
+  cursor: pointer;
+  overflow: hidden;
+  display: block;
+  user-select: none;
+  border-radius: 4.8rem;
+  color: rgba(0, 0, 0, 0.30);
+  flex-shrink: 0;
+  font-size: 3.6rem;
+  font-weight: 600;
+  padding-left: 7rem;
+  padding-right: 7rem;
+  pointer-events: none;
+  box-shadow: 0px 0.4rem 0.4rem 0px rgba(255, 255, 255, 0.5) inset,
+    0px 0.6rem 1.2rem 0px rgba(0, 0, 0, 0.25);
+
+  &.fw {
+    width: 100%;
+  }
+
+  &.non-upper {
+    .btn-inner {
+      text-transform: none;
+    }
+  }
+
+  &.center {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+.btn-gra {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(0, 220, 206, 1) 100%
+  );
+  width: 10rem;
+  height: 10rem;
+  padding: 0.6rem;
+  border-radius: 2rem;
+
+  &-inner {
+    border-radius: 1.6rem;
+    overflow: hidden;
+    display: flex;
+    padding: 0.9rem;
+    background: #0057b0;
+  }
+}
+
+.btn-gra2 {
+  background: rgb(248, 54, 0);
+  background: linear-gradient(
+    0,
+    rgba(248, 54, 0, 1) 0%,
+    rgba(250, 204, 34, 1) 100%
+  );
+  padding: 0.6rem;
+  border-radius: 2rem;
+
+  &-inner {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    background: white;
+    border-radius: 1.6rem;
+    padding: 1.5rem 2.8rem;
+    min-width: 29.6rem;
+  }
+
+  &-txt {
+    color: #000;
+    font-size: 3.6rem;
+    font-weight: 500;
+  }
+}
+
+.logout {
+  background: linear-gradient(24deg, #fb0023 20.95%, #ff609b 85.3%);
+}
+
+button {
+  transition: all 0.4s cubic-bezier(.47,1.64,.41,.8);
+  &:active {
+    transform: scale(0.93);
+  }
+}

@@ -1,0 +1,76 @@
+.avt {
+  &-list {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 3.8rem;
+    padding-bottom: 6.4rem;
+  }
+
+  &-item {
+    width: calc(100% / 3);
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+    display: block;
+
+    transition: all 0.3s cubic-bezier(0.47, 1.64, 0.41, 0.8);
+    &:active {
+      transform: scale(0.9);
+    }
+
+    &-wrap {
+      background: linear-gradient(
+        0deg,
+        rgba(0, 220, 206, 1) 0%,
+        rgba(255, 255, 255, 1) 100%
+      );
+      padding: 0.6rem;
+      border-radius: 5.5rem;
+      cursor: pointer;
+      box-shadow: 0px 20px 30px 0px rgba(0, 0, 0, 0.15);
+      position: relative;
+      display: block;
+
+      &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        border-radius: 5.5rem;
+        background: linear-gradient(
+          0deg,
+          rgba(248, 54, 0, 1) 0%,
+          rgba(250, 204, 34, 1) 100%
+        );
+        transition: all 0.3s ease-in-out;
+        opacity: 0;
+      }
+    }
+
+    &-box {
+      position: relative;
+      padding-top: 100%;
+      border-radius: 5rem;
+      overflow: hidden;
+      display: block;
+
+      img {
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+    }
+
+    input {
+      position: absolute;
+      visibility: hidden;
+      pointer-events: none;
+      opacity: 0;
+
+      &:checked ~ .avt-item-wrap::before {
+        opacity: 1;
+      }
+    }
+  }
+}

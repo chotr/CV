@@ -1,0 +1,60 @@
+// Library
+@import url("../js/library/fontawesome/css/all.css");
+@import url("../js/library/themify-icons/themify-icons.css");
+@import url("../js/library/select2/select2.min.css");
+@import url("../js/library/magnific/magnific-popup.css");
+@import url("../js/library/datetime/daterangepicker.css");
+
+// Core
+@import "./core/reset";
+@import "./core/variable";
+@import "./core/font";
+@import "./core/mixin";
+@import "./core/base";
+@import "./core/animation";
+@import "./core/magnific";
+@import "./core/global";
+
+// Component
+@import "./components/scroll";
+@import "./components/header";
+@import "./components/select2";   
+@import "./components/popup";
+@import "./components/toggle";
+@import "./components/tooltip";
+@import "./components/calender_date_range_picker";
+@import "./components/form";
+@import "./components/copy";
+@import "./components/tag";
+
+// Layout
+@import "./layouts/btn";
+@import "./layouts/component";
+@import "./layouts/text";
+@import "./layouts/distance";
+@import "./layouts/recheck";
+@import "./layouts/side";
+@import "./layouts/tab";
+@import "./layouts/table";
+@import "./layouts/payment";
+@import "./layouts/social";
+@import "./layouts/avatar";
+@import "./layouts/visitor";
+@import "./layouts/store";
+@import "./layouts/banner";
+
+// Pages
+
+
+:root {
+    --pdGen: 1.2rem;
+    --pdGen2: 2.4rem;
+
+    @include max(800px) {
+        --pdGen: 0.6rem;
+        --pdGen2: 1.2rem;
+        $pdGen: 0.6rem;
+        $pdGen2: 1.2rem;
+    }
+}
+

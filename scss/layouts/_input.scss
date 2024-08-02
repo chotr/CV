@@ -1,0 +1,54 @@
+.input {
+    @include font-pri;
+    width: 100%;
+    &-area {
+        height: auto;
+    }
+}
+
+.f {
+    &-list {
+        @include flex-st;
+        flex-wrap: wrap;
+        margin: 0 -5px;
+        margin-bottom: -10px;
+    }
+    &-item {
+        padding: 0 5px;
+        margin-bottom: 10px;
+        &-2 {
+            width: calc(100% / 2);
+            @include max($mobile) {
+                width: 100%;
+            }
+        }
+        &-3 {
+            width: calc(100% / 3);
+            @include max(768px) {
+                width: calc(100% / 2);
+            }
+            @include max($mobile) {
+                width: 100%;
+            }
+        }
+        &-4 {
+            width: calc(100% / 4);
+        }
+    }
+}
+
+.re {
+    &-label {
+        color: $color-black;
+        font-weight: 700;
+        margin-bottom: 8px;
+        display: block;
+    }
+    &-input {
+        padding: 16px;
+        width: 100%;
+        @include font-pri;
+        border: none;
+        outline: none;
+    }
+}

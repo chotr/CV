@@ -1,0 +1,262 @@
+.side {
+  &-fixed {
+    @include max(1201px) {
+      position: fixed;
+      width: auto;
+      max-width: 45rem;
+      min-width: 38rem;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      background-color: white;
+      z-index: 1000;
+      transition: 0.5s ease-in-out;
+      opacity: 0;
+      transform: translateX(102%);
+      visibility: hidden;
+
+      @include max(400px) {
+        width: 100%;
+        min-width: auto;
+      }
+
+      &.open {
+        opacity: 1;
+        transform: translate(0, 0);
+        visibility: visible;
+      }
+
+      &-wrap {
+        padding: 4.6rem 2.8rem;
+        width: 100%;
+        height: 100%;
+        overflow-y: auto;
+        overflow-x: hidden;
+        // @include max($res-mobile) {
+        // }
+
+        @include max(600px) {
+          padding: 3rem 1.5rem;
+        }
+      }
+    }
+
+    @include max(400px) {
+      width: 100%;
+      max-width: none;
+    }
+  }
+
+  &-overlay {
+    position: fixed;
+    @include full;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 50;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+    // transform: translateX(110%);
+    visibility: hidden;
+    z-index: 999;
+
+    &.open {
+      opacity: 1;
+      // transform: translate(0, 0);
+      visibility: visible;
+    }
+
+    // @include min($res-mobile-min) {
+    //     display: none;
+    // }
+  }
+
+  &-open {
+    width: 4rem;
+    height: 4rem;
+    position: fixed;
+    right: 0;
+    @include posi-vertical;
+    z-index: 40;
+    background-color: $color-second;
+    @include mid-flex;
+    border-radius: 100rem 0 0 100rem;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
+
+    &.close {
+      opacity: 0;
+      transform: translate(100%, -50%);
+      visibility: visible;
+    }
+
+    // @include min($res-mobile-min) {
+    //     display: none;
+    // }
+    &-wrap {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 100rem;
+      background-color: white;
+      @include mid-flex;
+
+      .icon {
+        color: $color-second;
+        font-weight: 600;
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &-close {
+    position: absolute;
+    top: 1rem;
+    right: 2rem;
+    width: 3rem;
+    height: 3rem;
+    background-color: white;
+    // border: 1px solid $color-pri;
+    @include mid-flex;
+    cursor: pointer;
+
+    @include min(1201px) {
+      display: none;
+    }
+
+    &:hover {
+      .icon {
+        transform: rotate(360deg);
+      }
+    }
+
+    .icon {
+      font-size: 1.8rem;
+      font-weight: 900;
+      transition: 0.6s ease-in-out;
+    }
+
+    // @include min($res-mobile-min) {
+    //     display: none;
+    // }
+  }
+
+  &-filter {
+    max-width: 47rem;
+
+    @include max(420px) {
+      width: 100vw;
+    }
+  }
+
+  &-act {
+    &-fixed {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      right: 6.8rem;
+      z-index: 800;
+
+      @include max(1600px) {
+        right: 1.5rem;
+      }
+
+      .side {
+        &-item {
+          padding: 1.3rem 0;
+
+          &-wrap {
+            width: 11rem;
+            height: 11rem;
+            border-radius: 50%;
+            @include mid-flex;
+            color: white;
+            text-align: center;
+            flex-direction: column;
+            padding: 1.2rem;
+            position: relative;
+            background: $color-pri;
+
+            @include max(1400px) {
+              width: 8.5rem;
+              height: 8.5rem;
+              padding: 0.8rem;
+            }
+
+            @include max(1201px) {
+              width: 5rem;
+              height: 5rem;
+              padding: 0.8rem;
+            }
+
+            &::before {
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              border-radius: 50%;
+              content: "";
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              z-index: -1;
+              background: rgba($color: $color-pri, $alpha: 0.2);
+              animation: bgScale 2s infinite;
+            }
+          }
+
+          .icon {
+            width: 2.4rem;
+            height: 2.4rem;
+            @include mid-flex;
+            margin-bottom: 0.5rem;
+
+            @include max(1400px) {
+              width: 2rem;
+              height: 2rem;
+            }
+          }
+
+          .text {
+            @include max(1400px) {
+              font-size: 1.4rem;
+            }
+
+            @include max(1201px) {
+              display: none;
+            }
+          }
+
+          &:nth-child(1) {
+            .side-item-wrap {
+              background: #8384AE;
+
+              &::before {
+                background: #efefff;
+              }
+            }
+          }
+
+          &:nth-child(2) {
+            .side-item-wrap {
+              background: #ED907A;
+
+              &::before {
+                background: #ffeae4;
+                animation-delay: 0.5s;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes bgScale {
+  0% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}

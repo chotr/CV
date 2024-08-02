@@ -1,0 +1,24 @@
+.front {
+  background: linear-gradient(
+    329deg,
+    #0026de 26.86%,
+    #005fdd 48.37%,
+    #00a4dc 71.11%,
+    #00eadb 91.43%
+  );
+  min-height: 100vh;
+  padding-top: 10vh;
+
+  &-logo {
+    display: block;
+    max-width: 52rem;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 17rem;
+  }
+
+  &-copyright {
+    margin-top: 15vh;
+    padding-bottom: 5rem;
+  }
+}

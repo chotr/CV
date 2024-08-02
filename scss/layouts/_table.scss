@@ -1,0 +1,50 @@
+.table-1 {
+  .table {
+    &-row {
+    }
+  }
+}
+
+.table {
+  &-head {
+    background: #dae1ef;
+  }
+
+  &-row {
+    display: flex;
+  }
+
+  &-col {
+    padding: 2.4rem 3.2rem;
+    font-weight: 500;
+    font-size: 2.8rem;
+  }
+}
+
+table {
+  width: 100%;
+}
+
+thead {
+  background: #dae1ef;
+}
+
+th {
+  font-weight: 500;
+  font-size: 2.8rem;
+}
+
+td {
+  font-size: 3.2rem;
+}
+
+th,
+td {
+  padding: 2.4rem 3.2rem;
+  min-width: 18rem;
+  white-space: nowrap;
+}
+
+tr:nth-child(even) td {
+  background: #ecf2ff;
+}

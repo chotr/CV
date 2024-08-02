@@ -1,0 +1,30 @@
+.visitor {
+  text-align: center;
+
+  &-img {
+    max-width: 24rem;
+    margin-bottom: 7rem;
+  }
+
+  &-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 1.6rem;
+    background: #fff;
+    padding: 7rem 8.2rem;
+  }
+
+  &-title {
+    color: #1f1a1a;
+    font-size: 4rem;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 3.2rem;
+  }
+
+  &-txt {
+    margin-bottom: 10rem;
+  }
+}
